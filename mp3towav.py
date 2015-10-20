@@ -1,7 +1,15 @@
 #!/usr/bin/env python
 
-"""mp3towav
-Converts a directory of MP3 files to WAV preserving the timestamp. Uses mpg123
+"""
+mp3towav converts a directory of MP3 files to WAV preserving the 
+timestamp. Uses (and thus requires) mpg123.
+Give it a source directory and a destination directory and it will 
+convert all .mp3 files in the source directory to .wav files in the
+destination directory. The original modification date/time will be 
+preserved. Optionally give it an offset (in seconds, can be negative,
+say -10) and it will offset the timestamp of the output files by that
+amount. (Useful for audio recorders and GPS trackers that are slightly
+out of sync, a common challenge.)
 
 Usage:
   mp3towav.py source_path destination_path [offset]
